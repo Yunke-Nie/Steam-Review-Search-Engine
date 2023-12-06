@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Review Search</title>
+  </head>
+  <body>
+    <h2>Game Review Search</h2>
+    <form method="POST">
+      Game Title: <input type="text" name="game_title" /><br />
+      Topic: <input type="text" name="topic" /><br />
+      Review Content: <input type="text" name="review_content" /><br />
+      Sentiment:
+      <select name="sentiment">
+        <option value="">Any</option>
+        <option value="Positive">Positive</option>
+        <option value="Negative">Negative</option>
+        <option value="Neutral">Neutral</option></select
+      ><br />
+      <!-- Add other filters as needed -->
+      <input type="submit" value="Search" />
+    </form>
+  </body>
+</html>

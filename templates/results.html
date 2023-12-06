@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h2>Search Results</h2>
+    {% if results %}
+        <ol>
+            {% for result in results %}
+                <li>
+                    <h3>{{ result._source.title }}</h3>
+                    <p>{{ result._source.review }}</p>
+                    <p><strong>Score:</strong> {{ result._score }}</p>
+                    <p><strong>Sentiment:</strong> {{ result._source.sentiment }}</p>
+                    <p><strong>Helpful:</strong> {{ result._source.helpful }}</p>
+                    <p><strong>Hours Played:</strong> {{ result._source.hour_played }}</p>
+                    <!-- Add more fields as needed -->
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
